@@ -52,7 +52,7 @@ function App() {
   }
   return (
     <div className="container">
-      <Header onAddTaskFormToggle={addTaskFormToggle} title="Task Tracker" /> 
+      <Header addTaskForm={addTaskForm} onAddTaskFormToggle={addTaskFormToggle} title="Task Tracker" /> 
       {addTaskForm && <AddTask onAdd={addTask}/>}
       { tasks.length>0? (<Tasks tasks={tasks} onToggle={toggleReminder} onDelete={deleteTask} />): ("No Tasks to Show")}
     </div>

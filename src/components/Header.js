@@ -16,7 +16,7 @@ const Header = (props) => {
                 backgroundColor: 'black',
             }}>This is styles example</h1> */}
             <h1>{props.title}</h1>
-            <Button onClick={props.onAddTaskFormToggle} bgColor='green' text='Add'/>
+            { props.addTaskForm? <Button onClick={props.onAddTaskFormToggle} bgColor='red' text='Close'/> :<Button onClick={props.onAddTaskFormToggle} bgColor='green' text='Add'/>}
         </header>
     )
 }
